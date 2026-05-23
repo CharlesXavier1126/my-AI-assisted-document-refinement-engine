@@ -3,24 +3,14 @@ You are a principal software architect and AI tooling engineer.
 Help me design and implement a production-quality AI-assisted document refinement engine.
 
 # Product Vision
-
-The product is NOT primarily a repository analysis tool.
-
-The real product goal is:
+The product goal is:
 - intelligently refine
 - correct
 - improve
 - validate
 - update
 
-a target document using evidence gathered from a codebase/repository.
-
-Repository scanning and codebase understanding are ONLY supporting mechanisms used to improve the document.
-
-The system should behave like:
-- an intelligent documentation reviewer
-- an AI-powered document corrector
-- a repository-aware document refinement engine
+Here are more details:
 
 --------------------------------------------------
 # PRIMARY INPUTS
@@ -34,13 +24,21 @@ The application receives:
 The target document will ALWAYS be:
 - .txt OR .md
 - human-written
-- focused on a specific topic
+- focused on a specific topic, usually clarified from its title
+
+The target repository/folder will ALWAYS be:
+- the path where this system can gather all the required information about the target document
+- this system should read the files within this path which are relevant to the topic the target document is about
+- system can ignore the files within this path which are totally irrelevent to the target document topic
 
 The FINAL OUTPUT must ALWAYS be:
-- refined markdown (.md)
-- structured and improved
-- evidence-based
-- repository-aware
+- firstly discuss with user about all uncertainties
+- then confirm with user about all the key improvements system is about to make
+- finally output a file that:
+  - refined markdown (.md)
+  - structured and improved
+  - evidence-based
+  - good human readability
 
 --------------------------------------------------
 # VERY IMPORTANT CORE CONCEPT
@@ -49,11 +47,11 @@ The FINAL OUTPUT must ALWAYS be:
 The target document title and topic determine the analysis strategy.
 
 The system MUST:
-1. Understand the document title
+1. Understand the document's title
 2. Infer the document purpose
 3. Infer the document scope
-4. Determine WHICH repository areas are relevant
-5. Scan ONLY the relevant repository areas when possible
+4. Determine WHICH repository areas/files are relevant
+5. Scan ONLY the relevant repository areas/files when possible
 
 This is CRITICAL.
 
