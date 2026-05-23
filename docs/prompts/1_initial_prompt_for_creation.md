@@ -1,6 +1,6 @@
 You are a principal software architect and AI tooling engineer.
 
-Help me design and implement a production-quality AI-assisted document refinement engine.
+Help me design and implement a production-quality AI-assisted document refinement engine. (that will later be exposed via CLI and MCP. Future work, not the focus of current task)
 
 # Product Vision
 The product goal is:
