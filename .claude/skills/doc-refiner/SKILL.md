@@ -1,6 +1,9 @@
 # doc-refiner
 
-Refine, correct, and improve a target document using evidence gathered from a target repository.
+Refine, correct, and improve a target document using evidence gathered from a target repository. Use when validating or improving a markdown or text document against actual codebase files.
+
+## allowed-tools
+Read Glob Grep Write
 
 ## Invocation
 
