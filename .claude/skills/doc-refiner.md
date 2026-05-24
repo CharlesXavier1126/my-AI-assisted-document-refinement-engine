@@ -51,7 +51,7 @@ Examples:
 Use Glob to discover candidate files by pattern (e.g. `**/*auth*`, `**/tests/**`, `**/*.config.*`).
 Use Grep to search for specific keywords, function names, or symbols mentioned in the document.
 
-Read only the full file content that are directly relevant to the document topic.
+Read only the full file contents that are directly relevant to the document topic.
 
 Do not output anything to the user yet.
 
@@ -171,7 +171,4 @@ Refined document written to: <output path>
 
 ### Evidence used
 <list of repository files referenced>
-
-### Token consumed
-<estimation about the total token Claude has consumed during the whole process>
 ```
