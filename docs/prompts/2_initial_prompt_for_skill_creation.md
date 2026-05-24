@@ -19,7 +19,7 @@ Invoked like:
 
 The skill file will live at:
 
-.claude/skills/doc-refiner.md
+.claude/skills/doc-refiner/SKILL.md
 
 --------------------------------------------------
 # PRIMARY INPUTS
