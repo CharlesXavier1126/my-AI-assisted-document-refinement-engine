@@ -4,11 +4,11 @@ Help me design and implement a production-quality AI-assisted document refinemen
 
 # Product Vision
 The product goal is:
-- intelligently refine
-- correct
-- improve
-- validate
-- update
+- intelligently refine target document
+- correct any missing or inaccurate content
+- improve format and expression
+- validate improvement before update
+- update/rewrite target document
 
 Here are more details:
 
@@ -24,7 +24,7 @@ The application receives:
 The target document will ALWAYS be:
 - .txt OR .md
 - human-written
-- focused on a specific topic, usually clarified from its title
+- focused on a specific topic, usually revealed from its title or its content
 
 The target repository/folder will ALWAYS be:
 - the path where this system can gather all the required information about the target document
@@ -32,9 +32,9 @@ The target repository/folder will ALWAYS be:
 - system can ignore the files within this path which are totally irrelevent to the target document topic
 
 The FINAL OUTPUT must ALWAYS be:
-- firstly discuss with user about all uncertainties
+- firstly discuss with user about uncertainties if any
 - then confirm with user about all the key improvements system is about to make
-- finally output a file that:
+- finally output a file that is:
   - refined markdown (.md)
   - structured and improved
   - evidence-based
@@ -48,7 +48,7 @@ The target document title and topic determine the analysis strategy.
 
 The system MUST:
 1. Understand the document's title
-2. Infer the document purpose
+2. Infer the document's topic and purpose
 3. Infer the document scope
 4. Determine WHICH repository areas/files are relevant
 5. Scan ONLY the relevant repository areas/files when possible
@@ -57,10 +57,6 @@ This is CRITICAL.
 
 The system should NOT blindly scan:
 - all files
-- package.json
-- pom.xml
-- every config file
-- every module
 
 unless they are relevant to the target document topic.
 
